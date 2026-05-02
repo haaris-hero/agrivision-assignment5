@@ -4,11 +4,11 @@
 random_seed: 42
 
 paths:
-  filtered_images: "../assignment2_outputs/preprocessed_images/filtered"
-  labeled_components_pkl: "../assignment2_outputs/segmentation/labeled_components.pkl"
-  failure_cases_json: "../assignment2_outputs/metrics/failure_cases.json"
-  baseline_metrics_json: "../assignment2_outputs/metrics/performance_summary.json"
-  evaluate_py: "../assignment2_outputs/baseline_code/evaluate.py"
+  # Resolved at runtime by data.py — do not hardcode absolute paths here.
+  # Local:  ../assignment2_outputs/...
+  # Kaggle: /kaggle/input/datasets/muhammadhaaris27083/assignment1-outputs/assignment1_outputs/...
+  assignment2_local: "../assignment2_outputs"
+  assignment2_kaggle: "/kaggle/input/datasets/muhammadhaaris27083/assignment1-outputs/assignment1_outputs"
   outputs: "cnn_outputs"
 
 data:

@@ -17,15 +17,15 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 from PIL import Image
 
-from data import load_config, build_loaders, build_datasets
+from data import load_config, build_loaders, build_datasets, resolve_assignment2_root
 from models import build_model
 
 
 # ── Load Assignment 2 EvaluationPipeline ────────────────────────────────────
 
 def load_evaluator(cfg):
-    eval_py = os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                            cfg["paths"]["evaluate_py"]))
+    a2_root = resolve_assignment2_root(cfg)
+    eval_py = str(a2_root / "baseline_code" / "evaluate.py")
     spec = importlib.util.spec_from_file_location("evaluate_a2", eval_py)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
@@ -197,8 +197,8 @@ def plot_failure_case_predictions(model, device, failure_cases_json, image_dir,
 
 def load_baseline_metrics(cfg):
     """Load A2 performance_summary.json for clustering baseline."""
-    path = os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                         cfg["paths"]["baseline_metrics_json"]))
+    a2_root = resolve_assignment2_root(cfg)
+    path = str(a2_root / "metrics" / "performance_summary.json")
     with open(path) as f:
         data = json.load(f)
     # Handle both flat and nested JSON structures
@@ -275,10 +275,9 @@ def main():
 
     train_loader, val_loader, test_loader, all_paths, all_counts = build_loaders(cfg)
     evaluator = load_evaluator(cfg)
-    failure_json = os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                                  cfg["paths"]["failure_cases_json"]))
-    image_dir = os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                              cfg["paths"]["filtered_images"]))
+    a2_root      = resolve_assignment2_root(cfg)
+    failure_json = str(a2_root / "metrics" / "failure_cases.json")
+    image_dir    = str(a2_root / "preprocessed_images" / "filtered")
 
     # ── Load baselines from A2 ────────────────────────────────────────────────
     try:

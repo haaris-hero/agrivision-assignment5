@@ -15,6 +15,27 @@ def load_config(path="config.yaml"):
         return yaml.safe_load(f)
 
 
+def resolve_assignment2_root(cfg):
+    """Return the correct assignment2 data root for Kaggle or local."""
+    from pathlib import Path
+    # Try Kaggle path first
+    kaggle = Path(cfg["paths"]["assignment2_kaggle"])
+    if kaggle.exists():
+        print(f"[data] Using Kaggle assignment2 path: {kaggle}")
+        return kaggle
+    # Fall back to local relative path (resolve from repo root, not task1_cnn/)
+    local = (Path(__file__).parent / cfg["paths"]["assignment2_local"]).resolve()
+    if local.exists():
+        print(f"[data] Using local assignment2 path: {local}")
+        return local
+    raise FileNotFoundError(
+        f"assignment2 data not found.\n"
+        f"  Kaggle path tried: {kaggle}\n"
+        f"  Local path tried:  {local}\n"
+        f"  On Kaggle: attach dataset muhammadhaaris27083/assignment1-outputs"
+    )
+
+
 def load_labels(pkl_path):
     """Load labeled_components.pkl and extract per-image seed counts.
 
@@ -128,8 +149,9 @@ class SeedDataset(Dataset):
 
 def build_datasets(cfg):
     """Load images and labels, split into train/val/test, return datasets."""
-    image_dir = cfg["paths"]["filtered_images"]
-    pkl_path = cfg["paths"]["labeled_components_pkl"]
+    a2_root   = resolve_assignment2_root(cfg)
+    image_dir = str(a2_root / "preprocessed_images" / "filtered")
+    pkl_path  = str(a2_root / "segmentation" / "labeled_components.pkl")
     image_size = cfg["data"]["image_size"]
     val_frac = cfg["data"]["val_split"]
     test_frac = cfg["data"]["test_split"]
