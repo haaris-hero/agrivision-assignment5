@@ -81,9 +81,6 @@ def run_training(model_name, optimizer_name, cfg, train_loader, val_loader,
     if weight_decay_override is not None:
         wd = weight_decay_override
     model = model.to(device)
-    if torch.cuda.device_count() > 1:
-        model = nn.DataParallel(model)
-        print(f"[train] Using {torch.cuda.device_count()} GPUs via DataParallel")
 
     # For model_b use the winner optimizer from model_a comparison
     opt_name = optimizer_name
@@ -120,8 +117,7 @@ def run_training(model_name, optimizer_name, cfg, train_loader, val_loader,
     log_rows = []
 
     print(f"\n{'='*60}")
-    base_model = model.module if isinstance(model, nn.DataParallel) else model
-    print(f"Training {tag}  |  device={device}  |  params={base_model.count_params():,}")
+    print(f"Training {tag}  |  device={device}  |  params={model.count_params():,}")
     print(f"{'='*60}")
 
     for epoch in range(1, epochs + 1):
@@ -144,8 +140,7 @@ def run_training(model_name, optimizer_name, cfg, train_loader, val_loader,
             best_val_loss = val_loss
             best_val_mae = val_mae
             no_improve = 0
-            state = model.module.state_dict() if isinstance(model, nn.DataParallel) else model.state_dict()
-            torch.save({"epoch": epoch, "model_state": state,
+            torch.save({"epoch": epoch, "model_state": model.state_dict(),
                         "val_mae": val_mae, "val_loss": val_loss}, weights_path)
             star = " *"
         else:

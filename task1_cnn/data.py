@@ -224,10 +224,15 @@ def build_datasets(cfg):
 def build_loaders(cfg):
     train_ds, val_ds, test_ds, all_paths, all_counts = build_datasets(cfg)
     bs = cfg["training"]["batch_size"]
+    # num_workers=4 lets CPU pre-fetch batches while GPU trains
+    nw = 4 if torch.cuda.is_available() else 0
     train_loader = DataLoader(train_ds, batch_size=bs, shuffle=True,
-                              num_workers=0, pin_memory=True)
+                              num_workers=nw, pin_memory=True,
+                              persistent_workers=(nw > 0))
     val_loader = DataLoader(val_ds, batch_size=bs, shuffle=False,
-                            num_workers=0, pin_memory=True)
+                            num_workers=nw, pin_memory=True,
+                            persistent_workers=(nw > 0))
     test_loader = DataLoader(test_ds, batch_size=bs, shuffle=False,
-                             num_workers=0, pin_memory=True)
+                             num_workers=nw, pin_memory=True,
+                             persistent_workers=(nw > 0))
     return train_loader, val_loader, test_loader, all_paths, all_counts
