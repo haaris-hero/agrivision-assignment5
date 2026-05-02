@@ -52,7 +52,7 @@ model_b:
 training:
   epochs: 50
   early_stopping_patience: 7
-  batch_size: 16
+  batch_size: 32          # 16 per GPU × 2 GPUs
   loss: "mse"               # regression: MSE loss, evaluate with MAE/RMSE
 
 optimizer_comparison:        # run on Model A only
