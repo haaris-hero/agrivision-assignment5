@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"d:\\\\Assignment 5 CV\" -Recurse -Force)",
+      "Bash(Select-Object FullName, PSIsContainer)",
+      "Bash(Sort-Object FullName)",
+      "Bash(Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"d:\\\\Assignment 5 CV\\\\AgriTech_Assignment1_20260224_160909\" -Recurse -Force | Select-Object -Property FullName | ForEach-Object { $_.FullName })",
+      "Bash(Get-ChildItem -Path \"d:\\\\Assignment 5 CV\\\\task2_nst_video\\\\data\" -Recurse)",
+      "Bash(Select-Object -Property FullName, PSIsContainer)",
+      "Bash(Format-List)"
+    ]
+  }
+}

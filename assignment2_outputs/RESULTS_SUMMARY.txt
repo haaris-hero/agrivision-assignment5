@@ -1,0 +1,39 @@
+
+AGRITECH ASSIGNMENT 1 — RESULTS SUMMARY
+========================================
+Date: 2026-02-24 16:09:09
+Images: 141 processed
+METRICS
+-------
+MAE: 48.20
+RMSE: 64.11
+MAPE: 71.55%
+Accuracy: 28.45%
+Perfect Count Accuracy: 4.26%
+Error Std Dev: 43.31
+Max Underestimate: -121.0
+Max Overestimate: 22.0
+DETECTION
+---------
+Non-zero predictions: 141/141 (100.0%)
+Avg predicted: 24.70
+Avg ground truth: 71.98
+FAILURES (>10% error): 129
+Failure rate: 91.5%
+ROOT CAUSE OF UNDERCOUNTING (FIXED)
+-------------------------------------
+The refined mask showed correct blobs but _valid() rejected most silently:
+  edge_buffer 20→5: seeds near border were valid
+  max_aspect_ratio 2.5→3.5: side-by-side pairs have AR 2-3
+  min_circularity 0.4→0.20: touching pairs are elongated
+  min_seed_area 15000→8000: partial seeds are smaller
+  Oversized blobs now ESTIMATED not dropped
+COMPLIANCE
+----------
+✓ No sklearn/TF/PyTorch/Keras
+✓ KMeans: cv2.kmeans
+✓ DBSCAN: vectorised NumPy (fast)
+✓ Both clustering methods compared per image
+✓ labeled_components.pkl = ONE unified file
+✓ All outputs saved
+✓ baseline_code/ has all 5 .py modules + config.yaml

@@ -1,0 +1,102 @@
+# Task 2 — Neural Style Transfer + Human Matting
+# AgriVision Assignment 5
+
+random_seed: 42
+
+paths:
+  # On Kaggle:  /kaggle/input/datasets/muhammadhaaris27083/aisegment-6k
+  # Locally:    data/aisegment_6k
+  # Resolved automatically by utils.py — do not hardcode here.
+  data_root:    "data/aisegment_6k"
+  kaggle_data_root: "/kaggle/input/datasets/muhammadhaaris27083/aisegment-6k"
+
+  weights_dir:  "weights"
+  outputs_dir:  "outputs"
+  content_dir:  "content"
+  style_dir:    "style"
+  input_video:  "input_video.mp4"
+
+# ── Subsampling strategy (document requirement) ───────────────────────────────
+# Full AISegment dataset: ~34,426 pairs.
+# We sort all images globally by (session_id, clip_subfolder, filename) —
+# fully deterministic, no random seed needed.
+# First 6,000 matched pairs taken sequentially:
+#   train: pairs 0–4999    (5,000)
+#   val:   pairs 5000–5499   (500)
+#   test:  pairs 5500–5999   (500)
+subsampling:
+  strategy: "sequential_sorted"
+  total: 6000
+  train: 5000
+  val:   500
+  test:  500
+
+# ── Matting model ─────────────────────────────────────────────────────────────
+matting:
+  architecture: "unet"
+  input_size: 256
+  encoder_channels: [3, 64, 128, 256, 512]
+  decoder_channels: [512, 256, 128, 64]
+  output_channels: 1
+
+  loss:
+    l1_weight: 0.5
+    bce_weight: 0.3
+    dice_weight: 0.2
+
+  training:
+    epochs: 25
+    batch_size: 16
+    optimizer: "adam"
+    lr: 1.0e-4
+    weight_decay: 1.0e-5
+    early_stopping_patience: 5
+    lr_scheduler: "ReduceLROnPlateau"
+    lr_factor: 0.5
+    lr_patience: 3
+
+  augmentation:
+    horizontal_flip: true
+    color_jitter:
+      brightness: 0.2
+      contrast: 0.2
+      saturation: 0.2
+    random_crop: true
+    crop_scale: [0.8, 1.0]
+
+  target_iou: 0.85
+
+# ── Neural Style Transfer ─────────────────────────────────────────────────────
+nst:
+  backbone: "vgg19"
+  image_size: 512
+  content_layer: "relu4_2"
+  style_layers:
+    - "relu1_1"
+    - "relu2_1"
+    - "relu3_1"
+    - "relu4_1"
+    - "relu5_1"
+  style_layer_weights: [0.2, 0.2, 0.2, 0.2, 0.2]
+
+  optimizer: "lbfgs"
+  max_iter: 500
+
+  content_weight: 1.0
+  style_weight_sweep: [1.0e3, 1.0e5, 1.0e7]
+  default_style_weight: 1.0e5
+
+  temporal_consistency: true
+
+  layer_ablation:
+    shallow: ["relu1_1", "relu2_1"]
+    deep:    ["relu4_1", "relu5_1"]
+
+# ── Video pipeline ────────────────────────────────────────────────────────────
+video:
+  fps: null
+  frame_ext: "jpg"
+  content_frames: 5
+  nst_image_size: 512
+  compositing:
+    variants: ["background", "subject", "full"]

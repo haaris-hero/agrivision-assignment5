@@ -1,0 +1,42 @@
+canny:
+  lower: 30
+  upper: 90
+clustering:
+  dbscan:
+    eps: 80
+    min_samples: 30
+  kmeans:
+    epsilon: 1.0
+    max_iter: 100
+    n_clusters: 2
+morphological:
+  closing_iterations: 1
+  kernel_shape: ellipse
+  kernel_size: 3
+  opening_iterations: 1
+object_counting:
+  edge_buffer: 5
+  max_aspect_ratio: 3.5
+  max_seed_area: 55000
+  min_circularity: 0.2
+  min_seed_area: 8000
+  use_watershed: true
+preprocessing:
+  filters:
+    bilateral:
+      d: 9
+      sigma_color: 50
+      sigma_space: 50
+    gaussian:
+      kernel_size: 5
+      sigma: 1.5
+    median:
+      kernel_size: 5
+  force_gaussian: true
+  grayscale: true
+thresholding:
+  adaptive:
+    block_size: 51
+    c: 5
+  otsu: {}
+watershed_thresh: 0.3

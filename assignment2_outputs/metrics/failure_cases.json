@@ -1,0 +1,1163 @@
+[
+  {
+    "image_index": 0,
+    "true_count": 1,
+    "predicted_count": 14,
+    "error": 13,
+    "percent_error": 1300.0,
+    "reason": "High counting error",
+    "image_name": "1.jpg"
+  },
+  {
+    "image_index": 1,
+    "true_count": 2,
+    "predicted_count": 15,
+    "error": 13,
+    "percent_error": 650.0,
+    "reason": "High counting error",
+    "image_name": "2.jpg"
+  },
+  {
+    "image_index": 2,
+    "true_count": 3,
+    "predicted_count": 25,
+    "error": 22,
+    "percent_error": 733.3333333333334,
+    "reason": "High counting error",
+    "image_name": "3.jpg"
+  },
+  {
+    "image_index": 4,
+    "true_count": 5,
+    "predicted_count": 22,
+    "error": 17,
+    "percent_error": 340.0,
+    "reason": "High counting error",
+    "image_name": "5.jpg"
+  },
+  {
+    "image_index": 8,
+    "true_count": 9,
+    "predicted_count": 8,
+    "error": -1,
+    "percent_error": 11.11111111111111,
+    "reason": "High counting error",
+    "image_name": "9.jpg"
+  },
+  {
+    "image_index": 17,
+    "true_count": 18,
+    "predicted_count": 16,
+    "error": -2,
+    "percent_error": 11.11111111111111,
+    "reason": "High counting error",
+    "image_name": "18.jpg"
+  },
+  {
+    "image_index": 18,
+    "true_count": 19,
+    "predicted_count": 16,
+    "error": -3,
+    "percent_error": 15.789473684210526,
+    "reason": "High counting error",
+    "image_name": "19.jpg"
+  },
+  {
+    "image_index": 19,
+    "true_count": 20,
+    "predicted_count": 17,
+    "error": -3,
+    "percent_error": 15.0,
+    "reason": "High counting error",
+    "image_name": "20.jpg"
+  },
+  {
+    "image_index": 20,
+    "true_count": 21,
+    "predicted_count": 18,
+    "error": -3,
+    "percent_error": 14.285714285714286,
+    "reason": "High counting error",
+    "image_name": "21.jpg"
+  },
+  {
+    "image_index": 21,
+    "true_count": 22,
+    "predicted_count": 16,
+    "error": -6,
+    "percent_error": 27.272727272727273,
+    "reason": "High counting error",
+    "image_name": "22.jpg"
+  },
+  {
+    "image_index": 22,
+    "true_count": 23,
+    "predicted_count": 13,
+    "error": -10,
+    "percent_error": 43.47826086956522,
+    "reason": "High counting error",
+    "image_name": "23.jpg"
+  },
+  {
+    "image_index": 23,
+    "true_count": 24,
+    "predicted_count": 14,
+    "error": -10,
+    "percent_error": 41.666666666666664,
+    "reason": "High counting error",
+    "image_name": "24.jpg"
+  },
+  {
+    "image_index": 24,
+    "true_count": 25,
+    "predicted_count": 14,
+    "error": -11,
+    "percent_error": 44.0,
+    "reason": "High counting error",
+    "image_name": "25.jpg"
+  },
+  {
+    "image_index": 25,
+    "true_count": 26,
+    "predicted_count": 15,
+    "error": -11,
+    "percent_error": 42.30769230769231,
+    "reason": "High counting error",
+    "image_name": "26.jpg"
+  },
+  {
+    "image_index": 26,
+    "true_count": 27,
+    "predicted_count": 16,
+    "error": -11,
+    "percent_error": 40.74074074074074,
+    "reason": "High counting error",
+    "image_name": "27.jpg"
+  },
+  {
+    "image_index": 27,
+    "true_count": 28,
+    "predicted_count": 16,
+    "error": -12,
+    "percent_error": 42.857142857142854,
+    "reason": "High counting error",
+    "image_name": "28.jpg"
+  },
+  {
+    "image_index": 28,
+    "true_count": 29,
+    "predicted_count": 17,
+    "error": -12,
+    "percent_error": 41.37931034482759,
+    "reason": "High counting error",
+    "image_name": "29.jpg"
+  },
+  {
+    "image_index": 29,
+    "true_count": 30,
+    "predicted_count": 17,
+    "error": -13,
+    "percent_error": 43.333333333333336,
+    "reason": "High counting error",
+    "image_name": "30.jpg"
+  },
+  {
+    "image_index": 30,
+    "true_count": 31,
+    "predicted_count": 24,
+    "error": -7,
+    "percent_error": 22.580645161290324,
+    "reason": "High counting error",
+    "image_name": "31.jpg"
+  },
+  {
+    "image_index": 31,
+    "true_count": 32,
+    "predicted_count": 25,
+    "error": -7,
+    "percent_error": 21.875,
+    "reason": "High counting error",
+    "image_name": "32.jpg"
+  },
+  {
+    "image_index": 32,
+    "true_count": 33,
+    "predicted_count": 29,
+    "error": -4,
+    "percent_error": 12.121212121212121,
+    "reason": "High counting error",
+    "image_name": "33.jpg"
+  },
+  {
+    "image_index": 33,
+    "true_count": 34,
+    "predicted_count": 28,
+    "error": -6,
+    "percent_error": 17.647058823529413,
+    "reason": "High counting error",
+    "image_name": "34.jpg"
+  },
+  {
+    "image_index": 34,
+    "true_count": 35,
+    "predicted_count": 29,
+    "error": -6,
+    "percent_error": 17.142857142857142,
+    "reason": "High counting error",
+    "image_name": "35.jpg"
+  },
+  {
+    "image_index": 35,
+    "true_count": 36,
+    "predicted_count": 29,
+    "error": -7,
+    "percent_error": 19.444444444444443,
+    "reason": "High counting error",
+    "image_name": "36.jpg"
+  },
+  {
+    "image_index": 36,
+    "true_count": 37,
+    "predicted_count": 30,
+    "error": -7,
+    "percent_error": 18.91891891891892,
+    "reason": "High counting error",
+    "image_name": "37.jpg"
+  },
+  {
+    "image_index": 37,
+    "true_count": 38,
+    "predicted_count": 31,
+    "error": -7,
+    "percent_error": 18.42105263157895,
+    "reason": "High counting error",
+    "image_name": "38.jpg"
+  },
+  {
+    "image_index": 38,
+    "true_count": 39,
+    "predicted_count": 33,
+    "error": -6,
+    "percent_error": 15.384615384615385,
+    "reason": "High counting error",
+    "image_name": "39.jpg"
+  },
+  {
+    "image_index": 39,
+    "true_count": 40,
+    "predicted_count": 33,
+    "error": -7,
+    "percent_error": 17.5,
+    "reason": "High counting error",
+    "image_name": "40.jpg"
+  },
+  {
+    "image_index": 40,
+    "true_count": 41,
+    "predicted_count": 34,
+    "error": -7,
+    "percent_error": 17.073170731707318,
+    "reason": "High counting error",
+    "image_name": "41.jpg"
+  },
+  {
+    "image_index": 41,
+    "true_count": 42,
+    "predicted_count": 35,
+    "error": -7,
+    "percent_error": 16.666666666666668,
+    "reason": "High counting error",
+    "image_name": "42.jpg"
+  },
+  {
+    "image_index": 42,
+    "true_count": 43,
+    "predicted_count": 36,
+    "error": -7,
+    "percent_error": 16.27906976744186,
+    "reason": "High counting error",
+    "image_name": "43.jpg"
+  },
+  {
+    "image_index": 43,
+    "true_count": 44,
+    "predicted_count": 37,
+    "error": -7,
+    "percent_error": 15.909090909090908,
+    "reason": "High counting error",
+    "image_name": "44.jpg"
+  },
+  {
+    "image_index": 44,
+    "true_count": 45,
+    "predicted_count": 38,
+    "error": -7,
+    "percent_error": 15.555555555555555,
+    "reason": "High counting error",
+    "image_name": "45.jpg"
+  },
+  {
+    "image_index": 45,
+    "true_count": 46,
+    "predicted_count": 38,
+    "error": -8,
+    "percent_error": 17.391304347826086,
+    "reason": "High counting error",
+    "image_name": "46.jpg"
+  },
+  {
+    "image_index": 46,
+    "true_count": 47,
+    "predicted_count": 36,
+    "error": -11,
+    "percent_error": 23.404255319148938,
+    "reason": "High counting error",
+    "image_name": "47.jpg"
+  },
+  {
+    "image_index": 47,
+    "true_count": 48,
+    "predicted_count": 38,
+    "error": -10,
+    "percent_error": 20.833333333333332,
+    "reason": "High counting error",
+    "image_name": "48.jpg"
+  },
+  {
+    "image_index": 48,
+    "true_count": 49,
+    "predicted_count": 38,
+    "error": -11,
+    "percent_error": 22.448979591836736,
+    "reason": "High counting error",
+    "image_name": "49.jpg"
+  },
+  {
+    "image_index": 49,
+    "true_count": 50,
+    "predicted_count": 35,
+    "error": -15,
+    "percent_error": 30.0,
+    "reason": "High counting error",
+    "image_name": "50.jpg"
+  },
+  {
+    "image_index": 50,
+    "true_count": 51,
+    "predicted_count": 39,
+    "error": -12,
+    "percent_error": 23.529411764705884,
+    "reason": "High counting error",
+    "image_name": "51.jpg"
+  },
+  {
+    "image_index": 51,
+    "true_count": 52,
+    "predicted_count": 37,
+    "error": -15,
+    "percent_error": 28.846153846153847,
+    "reason": "High counting error",
+    "image_name": "52.jpg"
+  },
+  {
+    "image_index": 52,
+    "true_count": 53,
+    "predicted_count": 23,
+    "error": -30,
+    "percent_error": 56.60377358490566,
+    "reason": "High counting error",
+    "image_name": "53.jpg"
+  },
+  {
+    "image_index": 53,
+    "true_count": 54,
+    "predicted_count": 24,
+    "error": -30,
+    "percent_error": 55.55555555555556,
+    "reason": "High counting error",
+    "image_name": "54.jpg"
+  },
+  {
+    "image_index": 54,
+    "true_count": 55,
+    "predicted_count": 22,
+    "error": -33,
+    "percent_error": 60.0,
+    "reason": "High counting error",
+    "image_name": "55.jpg"
+  },
+  {
+    "image_index": 55,
+    "true_count": 56,
+    "predicted_count": 30,
+    "error": -26,
+    "percent_error": 46.42857142857143,
+    "reason": "High counting error",
+    "image_name": "56.jpg"
+  },
+  {
+    "image_index": 56,
+    "true_count": 57,
+    "predicted_count": 29,
+    "error": -28,
+    "percent_error": 49.12280701754386,
+    "reason": "High counting error",
+    "image_name": "57.jpg"
+  },
+  {
+    "image_index": 57,
+    "true_count": 58,
+    "predicted_count": 31,
+    "error": -27,
+    "percent_error": 46.55172413793103,
+    "reason": "High counting error",
+    "image_name": "58.jpg"
+  },
+  {
+    "image_index": 58,
+    "true_count": 59,
+    "predicted_count": 31,
+    "error": -28,
+    "percent_error": 47.45762711864407,
+    "reason": "High counting error",
+    "image_name": "59.jpg"
+  },
+  {
+    "image_index": 59,
+    "true_count": 60,
+    "predicted_count": 31,
+    "error": -29,
+    "percent_error": 48.333333333333336,
+    "reason": "High counting error",
+    "image_name": "60.jpg"
+  },
+  {
+    "image_index": 60,
+    "true_count": 61,
+    "predicted_count": 35,
+    "error": -26,
+    "percent_error": 42.622950819672134,
+    "reason": "High counting error",
+    "image_name": "61.jpg"
+  },
+  {
+    "image_index": 61,
+    "true_count": 62,
+    "predicted_count": 36,
+    "error": -26,
+    "percent_error": 41.935483870967744,
+    "reason": "High counting error",
+    "image_name": "62.jpg"
+  },
+  {
+    "image_index": 62,
+    "true_count": 63,
+    "predicted_count": 36,
+    "error": -27,
+    "percent_error": 42.857142857142854,
+    "reason": "High counting error",
+    "image_name": "63.jpg"
+  },
+  {
+    "image_index": 63,
+    "true_count": 64,
+    "predicted_count": 34,
+    "error": -30,
+    "percent_error": 46.875,
+    "reason": "High counting error",
+    "image_name": "64.jpg"
+  },
+  {
+    "image_index": 64,
+    "true_count": 65,
+    "predicted_count": 37,
+    "error": -28,
+    "percent_error": 43.07692307692308,
+    "reason": "High counting error",
+    "image_name": "65.jpg"
+  },
+  {
+    "image_index": 65,
+    "true_count": 67,
+    "predicted_count": 38,
+    "error": -29,
+    "percent_error": 43.28358208955224,
+    "reason": "High counting error",
+    "image_name": "67.jpg"
+  },
+  {
+    "image_index": 66,
+    "true_count": 68,
+    "predicted_count": 38,
+    "error": -30,
+    "percent_error": 44.11764705882353,
+    "reason": "High counting error",
+    "image_name": "68.jpg"
+  },
+  {
+    "image_index": 67,
+    "true_count": 69,
+    "predicted_count": 39,
+    "error": -30,
+    "percent_error": 43.47826086956522,
+    "reason": "High counting error",
+    "image_name": "69.jpg"
+  },
+  {
+    "image_index": 68,
+    "true_count": 70,
+    "predicted_count": 44,
+    "error": -26,
+    "percent_error": 37.142857142857146,
+    "reason": "High counting error",
+    "image_name": "70.jpg"
+  },
+  {
+    "image_index": 69,
+    "true_count": 71,
+    "predicted_count": 44,
+    "error": -27,
+    "percent_error": 38.028169014084504,
+    "reason": "High counting error",
+    "image_name": "71.jpg"
+  },
+  {
+    "image_index": 70,
+    "true_count": 72,
+    "predicted_count": 45,
+    "error": -27,
+    "percent_error": 37.5,
+    "reason": "High counting error",
+    "image_name": "72.jpg"
+  },
+  {
+    "image_index": 71,
+    "true_count": 73,
+    "predicted_count": 44,
+    "error": -29,
+    "percent_error": 39.726027397260275,
+    "reason": "High counting error",
+    "image_name": "73.jpg"
+  },
+  {
+    "image_index": 72,
+    "true_count": 74,
+    "predicted_count": 19,
+    "error": -55,
+    "percent_error": 74.32432432432432,
+    "reason": "High counting error",
+    "image_name": "74.jpg"
+  },
+  {
+    "image_index": 73,
+    "true_count": 75,
+    "predicted_count": 22,
+    "error": -53,
+    "percent_error": 70.66666666666667,
+    "reason": "High counting error",
+    "image_name": "75.jpg"
+  },
+  {
+    "image_index": 74,
+    "true_count": 76,
+    "predicted_count": 23,
+    "error": -53,
+    "percent_error": 69.73684210526316,
+    "reason": "High counting error",
+    "image_name": "76.jpg"
+  },
+  {
+    "image_index": 75,
+    "true_count": 77,
+    "predicted_count": 25,
+    "error": -52,
+    "percent_error": 67.53246753246754,
+    "reason": "High counting error",
+    "image_name": "77.jpg"
+  },
+  {
+    "image_index": 76,
+    "true_count": 78,
+    "predicted_count": 27,
+    "error": -51,
+    "percent_error": 65.38461538461539,
+    "reason": "High counting error",
+    "image_name": "78.jpg"
+  },
+  {
+    "image_index": 77,
+    "true_count": 79,
+    "predicted_count": 23,
+    "error": -56,
+    "percent_error": 70.88607594936708,
+    "reason": "High counting error",
+    "image_name": "79.jpg"
+  },
+  {
+    "image_index": 78,
+    "true_count": 80,
+    "predicted_count": 37,
+    "error": -43,
+    "percent_error": 53.75,
+    "reason": "High counting error",
+    "image_name": "80.jpg"
+  },
+  {
+    "image_index": 79,
+    "true_count": 81,
+    "predicted_count": 46,
+    "error": -35,
+    "percent_error": 43.20987654320987,
+    "reason": "High counting error",
+    "image_name": "81.jpg"
+  },
+  {
+    "image_index": 80,
+    "true_count": 82,
+    "predicted_count": 44,
+    "error": -38,
+    "percent_error": 46.34146341463415,
+    "reason": "High counting error",
+    "image_name": "82.jpg"
+  },
+  {
+    "image_index": 81,
+    "true_count": 83,
+    "predicted_count": 43,
+    "error": -40,
+    "percent_error": 48.19277108433735,
+    "reason": "High counting error",
+    "image_name": "83.jpg"
+  },
+  {
+    "image_index": 82,
+    "true_count": 84,
+    "predicted_count": 39,
+    "error": -45,
+    "percent_error": 53.57142857142857,
+    "reason": "High counting error",
+    "image_name": "84.jpg"
+  },
+  {
+    "image_index": 83,
+    "true_count": 85,
+    "predicted_count": 43,
+    "error": -42,
+    "percent_error": 49.411764705882355,
+    "reason": "High counting error",
+    "image_name": "85.jpg"
+  },
+  {
+    "image_index": 84,
+    "true_count": 86,
+    "predicted_count": 47,
+    "error": -39,
+    "percent_error": 45.348837209302324,
+    "reason": "High counting error",
+    "image_name": "86.jpg"
+  },
+  {
+    "image_index": 85,
+    "true_count": 87,
+    "predicted_count": 45,
+    "error": -42,
+    "percent_error": 48.275862068965516,
+    "reason": "High counting error",
+    "image_name": "87.jpg"
+  },
+  {
+    "image_index": 86,
+    "true_count": 88,
+    "predicted_count": 46,
+    "error": -42,
+    "percent_error": 47.72727272727273,
+    "reason": "High counting error",
+    "image_name": "88.jpg"
+  },
+  {
+    "image_index": 87,
+    "true_count": 89,
+    "predicted_count": 54,
+    "error": -35,
+    "percent_error": 39.325842696629216,
+    "reason": "High counting error",
+    "image_name": "89.jpg"
+  },
+  {
+    "image_index": 88,
+    "true_count": 90,
+    "predicted_count": 44,
+    "error": -46,
+    "percent_error": 51.111111111111114,
+    "reason": "High counting error",
+    "image_name": "90.jpg"
+  },
+  {
+    "image_index": 89,
+    "true_count": 91,
+    "predicted_count": 56,
+    "error": -35,
+    "percent_error": 38.46153846153846,
+    "reason": "High counting error",
+    "image_name": "91.jpg"
+  },
+  {
+    "image_index": 90,
+    "true_count": 92,
+    "predicted_count": 38,
+    "error": -54,
+    "percent_error": 58.69565217391305,
+    "reason": "High counting error",
+    "image_name": "92.jpg"
+  },
+  {
+    "image_index": 91,
+    "true_count": 93,
+    "predicted_count": 52,
+    "error": -41,
+    "percent_error": 44.086021505376344,
+    "reason": "High counting error",
+    "image_name": "93.jpg"
+  },
+  {
+    "image_index": 92,
+    "true_count": 94,
+    "predicted_count": 41,
+    "error": -53,
+    "percent_error": 56.38297872340426,
+    "reason": "High counting error",
+    "image_name": "94.jpg"
+  },
+  {
+    "image_index": 93,
+    "true_count": 95,
+    "predicted_count": 43,
+    "error": -52,
+    "percent_error": 54.73684210526316,
+    "reason": "High counting error",
+    "image_name": "95.jpg"
+  },
+  {
+    "image_index": 94,
+    "true_count": 96,
+    "predicted_count": 44,
+    "error": -52,
+    "percent_error": 54.166666666666664,
+    "reason": "High counting error",
+    "image_name": "96.jpg"
+  },
+  {
+    "image_index": 95,
+    "true_count": 97,
+    "predicted_count": 43,
+    "error": -54,
+    "percent_error": 55.670103092783506,
+    "reason": "High counting error",
+    "image_name": "97.jpg"
+  },
+  {
+    "image_index": 96,
+    "true_count": 98,
+    "predicted_count": 3,
+    "error": -95,
+    "percent_error": 96.93877551020408,
+    "reason": "High counting error",
+    "image_name": "98.jpg"
+  },
+  {
+    "image_index": 97,
+    "true_count": 99,
+    "predicted_count": 6,
+    "error": -93,
+    "percent_error": 93.93939393939394,
+    "reason": "High counting error",
+    "image_name": "99.jpg"
+  },
+  {
+    "image_index": 98,
+    "true_count": 100,
+    "predicted_count": 7,
+    "error": -93,
+    "percent_error": 93.0,
+    "reason": "High counting error",
+    "image_name": "100.jpg"
+  },
+  {
+    "image_index": 99,
+    "true_count": 101,
+    "predicted_count": 7,
+    "error": -94,
+    "percent_error": 93.06930693069307,
+    "reason": "High counting error",
+    "image_name": "101.jpg"
+  },
+  {
+    "image_index": 100,
+    "true_count": 102,
+    "predicted_count": 8,
+    "error": -94,
+    "percent_error": 92.15686274509804,
+    "reason": "High counting error",
+    "image_name": "102.jpg"
+  },
+  {
+    "image_index": 101,
+    "true_count": 103,
+    "predicted_count": 8,
+    "error": -95,
+    "percent_error": 92.23300970873787,
+    "reason": "High counting error",
+    "image_name": "103.jpg"
+  },
+  {
+    "image_index": 102,
+    "true_count": 104,
+    "predicted_count": 7,
+    "error": -97,
+    "percent_error": 93.26923076923077,
+    "reason": "High counting error",
+    "image_name": "104.jpg"
+  },
+  {
+    "image_index": 103,
+    "true_count": 105,
+    "predicted_count": 7,
+    "error": -98,
+    "percent_error": 93.33333333333333,
+    "reason": "High counting error",
+    "image_name": "105.jpg"
+  },
+  {
+    "image_index": 104,
+    "true_count": 106,
+    "predicted_count": 7,
+    "error": -99,
+    "percent_error": 93.39622641509433,
+    "reason": "High counting error",
+    "image_name": "106.jpg"
+  },
+  {
+    "image_index": 105,
+    "true_count": 107,
+    "predicted_count": 6,
+    "error": -101,
+    "percent_error": 94.39252336448598,
+    "reason": "High counting error",
+    "image_name": "107.jpg"
+  },
+  {
+    "image_index": 106,
+    "true_count": 109,
+    "predicted_count": 6,
+    "error": -103,
+    "percent_error": 94.4954128440367,
+    "reason": "High counting error",
+    "image_name": "109.jpg"
+  },
+  {
+    "image_index": 107,
+    "true_count": 110,
+    "predicted_count": 9,
+    "error": -101,
+    "percent_error": 91.81818181818181,
+    "reason": "High counting error",
+    "image_name": "110.jpg"
+  },
+  {
+    "image_index": 108,
+    "true_count": 111,
+    "predicted_count": 12,
+    "error": -99,
+    "percent_error": 89.1891891891892,
+    "reason": "High counting error",
+    "image_name": "111.jpg"
+  },
+  {
+    "image_index": 109,
+    "true_count": 112,
+    "predicted_count": 11,
+    "error": -101,
+    "percent_error": 90.17857142857143,
+    "reason": "High counting error",
+    "image_name": "112.jpg"
+  },
+  {
+    "image_index": 110,
+    "true_count": 113,
+    "predicted_count": 12,
+    "error": -101,
+    "percent_error": 89.38053097345133,
+    "reason": "High counting error",
+    "image_name": "113.jpg"
+  },
+  {
+    "image_index": 111,
+    "true_count": 114,
+    "predicted_count": 13,
+    "error": -101,
+    "percent_error": 88.59649122807018,
+    "reason": "High counting error",
+    "image_name": "114.jpg"
+  },
+  {
+    "image_index": 112,
+    "true_count": 115,
+    "predicted_count": 14,
+    "error": -101,
+    "percent_error": 87.82608695652173,
+    "reason": "High counting error",
+    "image_name": "115.jpg"
+  },
+  {
+    "image_index": 113,
+    "true_count": 116,
+    "predicted_count": 14,
+    "error": -102,
+    "percent_error": 87.93103448275862,
+    "reason": "High counting error",
+    "image_name": "116.jpg"
+  },
+  {
+    "image_index": 114,
+    "true_count": 118,
+    "predicted_count": 18,
+    "error": -100,
+    "percent_error": 84.7457627118644,
+    "reason": "High counting error",
+    "image_name": "118.jpg"
+  },
+  {
+    "image_index": 115,
+    "true_count": 119,
+    "predicted_count": 18,
+    "error": -101,
+    "percent_error": 84.87394957983193,
+    "reason": "High counting error",
+    "image_name": "119.jpg"
+  },
+  {
+    "image_index": 116,
+    "true_count": 120,
+    "predicted_count": 21,
+    "error": -99,
+    "percent_error": 82.5,
+    "reason": "High counting error",
+    "image_name": "120.jpg"
+  },
+  {
+    "image_index": 117,
+    "true_count": 121,
+    "predicted_count": 24,
+    "error": -97,
+    "percent_error": 80.16528925619835,
+    "reason": "High counting error",
+    "image_name": "121.jpg"
+  },
+  {
+    "image_index": 118,
+    "true_count": 122,
+    "predicted_count": 25,
+    "error": -97,
+    "percent_error": 79.50819672131148,
+    "reason": "High counting error",
+    "image_name": "122.jpg"
+  },
+  {
+    "image_index": 119,
+    "true_count": 123,
+    "predicted_count": 21,
+    "error": -102,
+    "percent_error": 82.92682926829268,
+    "reason": "High counting error",
+    "image_name": "123.jpg"
+  },
+  {
+    "image_index": 120,
+    "true_count": 124,
+    "predicted_count": 16,
+    "error": -108,
+    "percent_error": 87.09677419354838,
+    "reason": "High counting error",
+    "image_name": "124.jpg"
+  },
+  {
+    "image_index": 121,
+    "true_count": 125,
+    "predicted_count": 21,
+    "error": -104,
+    "percent_error": 83.2,
+    "reason": "High counting error",
+    "image_name": "125.jpg"
+  },
+  {
+    "image_index": 122,
+    "true_count": 126,
+    "predicted_count": 22,
+    "error": -104,
+    "percent_error": 82.53968253968254,
+    "reason": "High counting error",
+    "image_name": "126.jpg"
+  },
+  {
+    "image_index": 123,
+    "true_count": 127,
+    "predicted_count": 15,
+    "error": -112,
+    "percent_error": 88.18897637795276,
+    "reason": "High counting error",
+    "image_name": "127.jpg"
+  },
+  {
+    "image_index": 124,
+    "true_count": 128,
+    "predicted_count": 14,
+    "error": -114,
+    "percent_error": 89.0625,
+    "reason": "High counting error",
+    "image_name": "128.jpg"
+  },
+  {
+    "image_index": 125,
+    "true_count": 129,
+    "predicted_count": 15,
+    "error": -114,
+    "percent_error": 88.37209302325581,
+    "reason": "High counting error",
+    "image_name": "129.jpg"
+  },
+  {
+    "image_index": 126,
+    "true_count": 130,
+    "predicted_count": 17,
+    "error": -113,
+    "percent_error": 86.92307692307692,
+    "reason": "High counting error",
+    "image_name": "130.jpg"
+  },
+  {
+    "image_index": 127,
+    "true_count": 131,
+    "predicted_count": 15,
+    "error": -116,
+    "percent_error": 88.54961832061069,
+    "reason": "High counting error",
+    "image_name": "131.jpg"
+  },
+  {
+    "image_index": 128,
+    "true_count": 132,
+    "predicted_count": 14,
+    "error": -118,
+    "percent_error": 89.39393939393939,
+    "reason": "High counting error",
+    "image_name": "132.jpg"
+  },
+  {
+    "image_index": 129,
+    "true_count": 133,
+    "predicted_count": 15,
+    "error": -118,
+    "percent_error": 88.7218045112782,
+    "reason": "High counting error",
+    "image_name": "133.jpg"
+  },
+  {
+    "image_index": 130,
+    "true_count": 134,
+    "predicted_count": 13,
+    "error": -121,
+    "percent_error": 90.29850746268657,
+    "reason": "High counting error",
+    "image_name": "134.jpg"
+  },
+  {
+    "image_index": 131,
+    "true_count": 135,
+    "predicted_count": 21,
+    "error": -114,
+    "percent_error": 84.44444444444444,
+    "reason": "High counting error",
+    "image_name": "135.jpg"
+  },
+  {
+    "image_index": 132,
+    "true_count": 136,
+    "predicted_count": 22,
+    "error": -114,
+    "percent_error": 83.82352941176471,
+    "reason": "High counting error",
+    "image_name": "136.jpg"
+  },
+  {
+    "image_index": 133,
+    "true_count": 137,
+    "predicted_count": 22,
+    "error": -115,
+    "percent_error": 83.94160583941606,
+    "reason": "High counting error",
+    "image_name": "137.jpg"
+  },
+  {
+    "image_index": 134,
+    "true_count": 138,
+    "predicted_count": 21,
+    "error": -117,
+    "percent_error": 84.78260869565217,
+    "reason": "High counting error",
+    "image_name": "138.jpg"
+  },
+  {
+    "image_index": 135,
+    "true_count": 139,
+    "predicted_count": 26,
+    "error": -113,
+    "percent_error": 81.29496402877697,
+    "reason": "High counting error",
+    "image_name": "139.jpg"
+  },
+  {
+    "image_index": 136,
+    "true_count": 140,
+    "predicted_count": 26,
+    "error": -114,
+    "percent_error": 81.42857142857143,
+    "reason": "High counting error",
+    "image_name": "140.jpg"
+  },
+  {
+    "image_index": 137,
+    "true_count": 141,
+    "predicted_count": 24,
+    "error": -117,
+    "percent_error": 82.97872340425532,
+    "reason": "High counting error",
+    "image_name": "141.jpg"
+  },
+  {
+    "image_index": 138,
+    "true_count": 142,
+    "predicted_count": 27,
+    "error": -115,
+    "percent_error": 80.98591549295774,
+    "reason": "High counting error",
+    "image_name": "142.jpg"
+  },
+  {
+    "image_index": 139,
+    "true_count": 143,
+    "predicted_count": 25,
+    "error": -118,
+    "percent_error": 82.51748251748252,
+    "reason": "High counting error",
+    "image_name": "143.jpg"
+  },
+  {
+    "image_index": 140,
+    "true_count": 144,
+    "predicted_count": 25,
+    "error": -119,
+    "percent_error": 82.63888888888889,
+    "reason": "High counting error",
+    "image_name": "144.jpg"
+  }
+]

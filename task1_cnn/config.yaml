@@ -1,0 +1,75 @@
+# Task 1 CNN — AgriVision Assignment 5
+# All hyperparameters and random seeds recorded here for reproducibility.
+
+random_seed: 42
+
+paths:
+  filtered_images: "../assignment2_outputs/preprocessed_images/filtered"
+  labeled_components_pkl: "../assignment2_outputs/segmentation/labeled_components.pkl"
+  failure_cases_json: "../assignment2_outputs/metrics/failure_cases.json"
+  baseline_metrics_json: "../assignment2_outputs/metrics/performance_summary.json"
+  evaluate_py: "../assignment2_outputs/baseline_code/evaluate.py"
+  outputs: "cnn_outputs"
+
+data:
+  image_size: 128          # resize all images to 128x128 for CNN input
+  val_split: 0.15
+  test_split: 0.15
+  # seed count range in dataset: 1-144; we treat this as a regression problem
+  # (predict seed count directly) to use the same MAE/RMSE/accuracy metrics
+
+augmentation:
+  rotation_degrees: 30
+  horizontal_flip: true
+  vertical_flip: true
+  brightness_factor: 0.2   # ±20%
+  zoom_factor: 0.10         # ±10% random resized crop
+
+model_a:
+  name: "BaselineCNN"
+  conv_blocks: 3
+  filters: [32, 64, 128]
+  use_batch_norm: true
+  activation: "relu"
+  pooling: "max"
+  global_avg_pool: true
+  dropout: 0.0
+  l2_weight_decay: 0.0
+  max_params: 1_500_000
+
+model_b:
+  name: "DeeperCNN"
+  conv_blocks: 4
+  filters: [32, 64, 128, 256]
+  use_batch_norm: true
+  activation: "relu"
+  pooling: "max"
+  global_avg_pool: true
+  dropout: 0.3              # 0.2–0.5 range
+  l2_weight_decay: 1.0e-4
+  residual_connection: true  # optional residual on last two blocks
+
+training:
+  epochs: 50
+  early_stopping_patience: 7
+  batch_size: 16
+  loss: "mse"               # regression: MSE loss, evaluate with MAE/RMSE
+
+optimizer_comparison:        # run on Model A only
+  adam:
+    lr: 1.0e-3
+    betas: [0.9, 0.999]
+    weight_decay: 0.0
+  sgd:
+    lr: 0.01
+    momentum: 0.9
+    weight_decay: 1.0e-4
+    nesterov: true
+
+model_b_optimizer: "adam"    # winner from Model A comparison used for Model B
+
+lr_scheduler:
+  type: "ReduceLROnPlateau"
+  factor: 0.5
+  patience: 3
+  min_lr: 1.0e-6
