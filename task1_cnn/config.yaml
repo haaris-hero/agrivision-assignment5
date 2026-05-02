@@ -12,18 +12,16 @@ paths:
   outputs: "cnn_outputs"
 
 data:
-  image_size: 128          # resize all images to 128x128 for CNN input
-  val_split: 0.15
-  test_split: 0.15
-  # seed count range in dataset: 1-144; we treat this as a regression problem
-  # (predict seed count directly) to use the same MAE/RMSE/accuracy metrics
+  image_size: 128
+  val_split: 0.10          # reduced from 0.15 → more training data
+  test_split: 0.10         # reduced from 0.15 → ~113 train, 14 val, 14 test
 
 augmentation:
-  rotation_degrees: 30
+  rotation_degrees: 45     # increased from 30
   horizontal_flip: true
   vertical_flip: true
-  brightness_factor: 0.2   # ±20%
-  zoom_factor: 0.10         # ±10% random resized crop
+  brightness_factor: 0.3   # increased from 0.2
+  zoom_factor: 0.15        # increased from 0.10
 
 model_a:
   name: "BaselineCNN"
@@ -45,17 +43,17 @@ model_b:
   activation: "relu"
   pooling: "max"
   global_avg_pool: true
-  dropout: 0.3              # 0.2–0.5 range
+  dropout: 0.3
   l2_weight_decay: 1.0e-4
-  residual_connection: true  # optional residual on last two blocks
+  residual_connection: true
 
 training:
-  epochs: 50
-  early_stopping_patience: 7
-  batch_size: 8           # small dataset (99 train) — small batch = more GPU iterations
-  loss: "mse"               # regression: MSE loss, evaluate with MAE/RMSE
+  epochs: 100              # increased from 50
+  early_stopping_patience: 15   # increased from 7
+  batch_size: 4            # reduced from 8 — more gradient updates per epoch
+  loss: "mse"
 
-optimizer_comparison:        # run on Model A only
+optimizer_comparison:
   adam:
     lr: 1.0e-3
     betas: [0.9, 0.999]
@@ -66,10 +64,9 @@ optimizer_comparison:        # run on Model A only
     weight_decay: 1.0e-4
     nesterov: true
 
-model_b_optimizer: "adam"    # winner from Model A comparison used for Model B
+model_b_optimizer: "adam"
 
 lr_scheduler:
-  type: "ReduceLROnPlateau"
-  factor: 0.5
-  patience: 3
-  min_lr: 1.0e-6
+  type: "CosineAnnealingLR"   # changed from ReduceLROnPlateau — smoother for small datasets
+  T_max: 100                  # matches epochs
+  eta_min: 1.0e-6

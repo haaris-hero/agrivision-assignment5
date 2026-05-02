@@ -5,7 +5,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.optim.lr_scheduler import ReduceLROnPlateau
+from torch.optim.lr_scheduler import ReduceLROnPlateau, CosineAnnealingLR
 import yaml
 
 from data import load_config, build_loaders
@@ -99,8 +99,16 @@ def run_training(model_name, optimizer_name, cfg, train_loader, val_loader,
                               nesterov=oc.get("nesterov", True))
 
     criterion = nn.MSELoss()
-    scheduler = ReduceLROnPlateau(optimizer, mode="min", factor=0.5, patience=3,
-                                  min_lr=1e-6)
+    sched_cfg = cfg.get("lr_scheduler", {})
+    if sched_cfg.get("type") == "CosineAnnealingLR":
+        scheduler = CosineAnnealingLR(optimizer,
+                                      T_max=cfg["training"]["epochs"],
+                                      eta_min=sched_cfg.get("eta_min", 1e-6))
+        scheduler_mode = "cosine"
+    else:
+        scheduler = ReduceLROnPlateau(optimizer, mode="min", factor=0.5, patience=3,
+                                      min_lr=1e-6)
+        scheduler_mode = "plateau"
 
     epochs = cfg["training"]["epochs"]
     patience = cfg["training"]["early_stopping_patience"]
@@ -124,7 +132,10 @@ def run_training(model_name, optimizer_name, cfg, train_loader, val_loader,
         t0 = time.time()
         train_loss, train_mae = train_one_epoch(model, train_loader, optimizer, criterion, device)
         val_loss, val_mae, _, _ = evaluate_loader(model, val_loader, criterion, device)
-        scheduler.step(val_loss)
+        if scheduler_mode == "cosine":
+            scheduler.step()
+        else:
+            scheduler.step(val_loss)
         elapsed = time.time() - t0
 
         row = {
