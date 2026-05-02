@@ -241,7 +241,7 @@ def main():
     model     = build_matting_model().to(device)
     optimizer = optim.Adam(model.parameters(), lr=t_cfg["lr"], weight_decay=t_cfg["weight_decay"])
     scheduler = ReduceLROnPlateau(optimizer, mode="max", factor=t_cfg["lr_factor"],
-                                   patience=t_cfg["lr_patience"], verbose=False)
+                                   patience=t_cfg["lr_patience"])
 
     weights_path = wt_dir / "matting_unet_best.pt"
     log_path     = out_dir / "matting_train_log.csv"
