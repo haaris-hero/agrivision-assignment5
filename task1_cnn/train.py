@@ -100,7 +100,7 @@ def run_training(model_name, optimizer_name, cfg, train_loader, val_loader,
 
     criterion = nn.MSELoss()
     scheduler = ReduceLROnPlateau(optimizer, mode="min", factor=0.5, patience=3,
-                                  min_lr=1e-6, verbose=False)
+                                  min_lr=1e-6)
 
     epochs = cfg["training"]["epochs"]
     patience = cfg["training"]["early_stopping_patience"]
