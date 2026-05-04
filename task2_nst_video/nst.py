@@ -110,15 +110,18 @@ def gram_matrix(feat):
 def nst_loss(gen_feats, content_feats, style_grams,
              content_layer, style_layers, style_layer_weights,
              content_weight, style_weight):
+    content_weight = float(content_weight)
+    style_weight   = float(style_weight)
+
     # Content loss
     l_content = nn.MSELoss()(gen_feats[content_layer], content_feats[content_layer].detach())
 
     # Style loss
-    l_style = 0.0
+    l_style = torch.zeros(1, device=l_content.device)
     for layer, w in zip(style_layers, style_layer_weights):
         G_gen   = gram_matrix(gen_feats[layer])
         G_style = style_grams[layer]
-        l_style += w * nn.MSELoss()(G_gen, G_style.detach())
+        l_style = l_style + float(w) * nn.MSELoss()(G_gen, G_style.detach())
 
     return content_weight * l_content + style_weight * l_style, l_content.item(), l_style.item()
 
