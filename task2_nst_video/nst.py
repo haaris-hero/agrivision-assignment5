@@ -177,7 +177,7 @@ def run_nst(content_tensor, style_tensor, extractor,
 def beta_alpha_ablation(content_path, style_path, cfg, out_path, device):
     nst_cfg   = cfg["nst"]
     size      = nst_cfg["image_size"]
-    sw_sweep  = nst_cfg["style_weight_sweep"]
+    sw_sweep  = [float(x) for x in nst_cfg["style_weight_sweep"]]
     cw        = nst_cfg["content_weight"]
     max_iter  = nst_cfg["max_iter"]
     cl        = nst_cfg["content_layer"]
