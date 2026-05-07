@@ -367,12 +367,9 @@ def main():
         return
 
     # 5×3 NST grid
-    if (out_dir / "grid.png").exists():
-        print("\n[nst] grid.png already exists — skipping.")
-    else:
-        print("\n[nst] Generating 5×3 sanity-check grid...")
-        nst_grid(content_paths[:5], style_paths[:3], cfg,
-                 out_dir / "grid.png", device)
+    print("\n[nst] Generating 5×3 sanity-check grid...")
+    nst_grid(content_paths[:5], style_paths[:3], cfg,
+             out_dir / "grid.png", device)
 
     # β/α ablation
     if (out_dir / "beta_alpha_ablation.png").exists():
