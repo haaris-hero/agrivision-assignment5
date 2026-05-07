@@ -367,28 +367,40 @@ def main():
         return
 
     # 5×3 NST grid
-    print("\n[nst] Generating 5×3 sanity-check grid...")
-    nst_grid(content_paths[:5], style_paths[:3], cfg,
-             out_dir / "grid.png", device)
+    if (out_dir / "grid.png").exists():
+        print("\n[nst] grid.png already exists — skipping.")
+    else:
+        print("\n[nst] Generating 5×3 sanity-check grid...")
+        nst_grid(content_paths[:5], style_paths[:3], cfg,
+                 out_dir / "grid.png", device)
 
     # β/α ablation
-    print("\n[nst] β/α ablation...")
-    beta_alpha_ablation(content_paths[0], style_paths[0], cfg,
-                        out_dir / "beta_alpha_ablation.png", device)
+    if (out_dir / "beta_alpha_ablation.png").exists():
+        print("[nst] beta_alpha_ablation.png already exists — skipping.")
+    else:
+        print("\n[nst] β/α ablation...")
+        beta_alpha_ablation(content_paths[0], style_paths[0], cfg,
+                            out_dir / "beta_alpha_ablation.png", device)
 
     # Layer ablation
-    print("\n[nst] Layer ablation...")
-    layer_ablation(content_paths[0], style_paths[0], cfg,
-                   out_dir / "layer_ablation.png", device)
+    if (out_dir / "layer_ablation.png").exists():
+        print("[nst] layer_ablation.png already exists — skipping.")
+    else:
+        print("\n[nst] Layer ablation...")
+        layer_ablation(content_paths[0], style_paths[0], cfg,
+                       out_dir / "layer_ablation.png", device)
 
     # Feature maps — video frame + seed image
-    seed_imgs = sorted((base.parent / "assignment2_outputs" /
-                        "preprocessed_images" / "filtered").glob("*.jpg"))
-    fmap_inputs = {"Video frame": str(content_paths[0])}
-    if seed_imgs:
-        fmap_inputs["Seed image (Task1)"] = str(seed_imgs[0])
-    print("\n[nst] Feature map visualization...")
-    visualize_feature_maps(fmap_inputs, cfg, out_dir / "feature_maps.png", device)
+    if (out_dir / "feature_maps.png").exists():
+        print("[nst] feature_maps.png already exists — skipping.")
+    else:
+        seed_imgs = sorted((base.parent / "assignment2_outputs" /
+                            "preprocessed_images" / "filtered").glob("*.jpg"))
+        fmap_inputs = {"Video frame": str(content_paths[0])}
+        if seed_imgs:
+            fmap_inputs["Seed image (Task1)"] = str(seed_imgs[0])
+        print("\n[nst] Feature map visualization...")
+        visualize_feature_maps(fmap_inputs, cfg, out_dir / "feature_maps.png", device)
 
     print("\n[nst] All static outputs done. Run video_pipeline.py for the videos.")
 
