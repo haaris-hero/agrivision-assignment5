@@ -13,7 +13,8 @@ task2_nst_video/weights/
 # Generated outputs — produced by running the code
 task1_cnn/cnn_outputs/plots/
 task1_cnn/cnn_outputs/logs/
-task1_cnn/cnn_outputs/metrics/
+task1_cnn/cnn_outputs/metrics/*.json
+task1_cnn/cnn_outputs/metrics/training_summary.json
 task2_nst_video/outputs/
 task2_nst_video/content/
 
@@ -23,6 +24,10 @@ assignment2_outputs/preprocessed_images/
 assignment2_outputs/segmentation/binary_masks/
 assignment2_outputs/segmentation/morphological/
 assignment2_outputs/visualizations/
+
+# Media files — uploaded separately to Kaggle as agrivision-media dataset
+task2_nst_video/agrivision-media/
+task2_nst_video/agrivision-media.zip
 
 # Assignment 3 folder — not needed in repo
 ICV Assignment 3-20260502T063154Z-3-002/

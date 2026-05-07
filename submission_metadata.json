@@ -1,0 +1,29 @@
+{
+  "student_name": "Muhammad Haaris Asif",
+  "erp": "27083",
+  "assignment": 5,
+  "submission_date": "2026-05-07",
+  "task1_cnn": {
+    "model_a_adam_val_mae": 3.4294,
+    "model_a_sgd_val_mae": 19.9003,
+    "winning_optimizer": "adam",
+    "random_seed": 42
+  },
+  "task2_nst_video": {
+    "matting_best_val_iou": 0.8305,
+    "matting_test_iou": 0.8261,
+    "matting_target_iou": 0.85,
+    "nst_backbone": "VGG19",
+    "style_weight_sweep": [1000, 100000, 10000000],
+    "video_frames": 368,
+    "video_fps": 14.97
+  },
+  "hardware": {
+    "training_platform": "Kaggle",
+    "gpu": "Tesla T4",
+    "task1_training_time_min": 20,
+    "task2_matting_training_time_min": 180,
+    "task2_video_pipeline_time_min": 213
+  },
+  "github_repo": "https://github.com/haaris-hero/agrivision-assignment5"
+}

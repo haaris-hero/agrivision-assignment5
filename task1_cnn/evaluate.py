@@ -286,11 +286,18 @@ def main():
         print(f"[eval] Could not load baseline metrics ({e}), using known values.")
         bl_mae, bl_rmse, bl_acc = 48.20, 64.11, 28.45
 
+    # Edge Detection (Assignment 3 Canny best method — from cross_dataset_analysis.json)
+    edge_mae, edge_rmse, edge_acc = 31.12, 38.02, 55.89
+
     metrics_all = {
         "Clustering (A1/A2)": {
             "mae": bl_mae, "rmse": bl_rmse, "accuracy_percent": bl_acc,
             "failure_cases_fixed": "reference",
-        }
+        },
+        "Edge Detection (A3 Canny)": {
+            "mae": edge_mae, "rmse": edge_rmse, "accuracy_percent": edge_acc,
+            "failure_cases_fixed": "N/A",
+        },
     }
 
     # ── Evaluate each trained model ───────────────────────────────────────────

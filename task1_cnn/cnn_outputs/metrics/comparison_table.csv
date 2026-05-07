@@ -1,0 +1,6 @@
+﻿Method,Accuracy_%,MAE,RMSE,Failure_Cases_Fixed
+Clustering (A1/A2),28.45,48.2,64.11,reference
+Edge Detection (A3 Canny),55.89,31.12,38.02,N/A
+Model A (Adam),85.11,5.619,7.6158,0/129
+Model A (SGD),14.29,22.8571,25.1358,10/129
+Model B (Deep),85.28,5.0476,6.6975,3/129
